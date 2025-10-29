@@ -14,7 +14,7 @@ steps:
     uses: actions/checkout@v4
 
   - name: Setup InfluxDB3
-    uses: komminarlabs/influxdb3-action@v0
+    uses: thulasirajkomminar/influxdb3-action@v0
     with:
       influxdb3_database: sensordata
       influxdb3_create_token: true

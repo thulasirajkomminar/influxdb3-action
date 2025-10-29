@@ -27,4 +27,4 @@ jobs:
           echo "Version:"
           docker exec influxdb3 influxdb3 --version
           echo "Databases:"
-          docker exec influxdb3 influxdb3 show databases
+          docker exec influxdb3 influxdb3 show databases --token "${{ steps.setup-influxdb3.outputs.influxdb3-auth-token }}"
