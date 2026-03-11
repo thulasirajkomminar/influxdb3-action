@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "automerge": false,
+  "schedule": [
+    "before 9am on monday"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "influxdb3-install\\.sh$"
+      ],
+      "matchStrings": [
+        "docker pull (?<depName>[^:]+):(?<currentValue>[\\w][\\w.-]+)"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
