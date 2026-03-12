@@ -10,8 +10,8 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "influxdb3-install\\.sh$"
+      "managerFilePatterns": [
+        "/influxdb3-install\\.sh$/"
       ],
       "matchStrings": [
         "docker pull (?<depName>[^:]+):(?<currentValue>[\\w][\\w.-]+)"
